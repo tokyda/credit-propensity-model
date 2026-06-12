@@ -1,0 +1,7 @@
+credit_propensity:
+  target: dev
+  outputs:
+    dev:
+      type: duckdb
+      path: '../data/berka.duckdb'
+      threads: 4

@@ -1,0 +1,21 @@
+version: 2
+
+models:
+  - name: feat_transaction_aggregates
+    columns:
+      - name: account_id
+        tests: [not_null, unique]
+      - name: avg_balance
+        tests: [not_null]
+      - name: account_age_days
+        tests: [not_null]
+
+  - name: feat_account_demographics
+    columns:
+      - name: account_id
+        tests: [not_null, unique]
+
+  - name: feat_account_products
+    columns:
+      - name: account_id
+        tests: [not_null, unique]

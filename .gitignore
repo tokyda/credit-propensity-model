@@ -1,0 +1,16 @@
+data/raw/
+data/berka.duckdb
+dbt_project/target/
+dbt_project/dbt_packages/
+dbt_project/logs/
+dbt_project/.user.yml
+__pycache__/
+*.pyc
+.env
+venv/
+.venv/
+.DS_Store
+.streamlit/secrets.toml
+*.db
+.ipynb_checkpoints/
+*.egg-info/

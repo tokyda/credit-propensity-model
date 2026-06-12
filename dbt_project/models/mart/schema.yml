@@ -1,0 +1,12 @@
+version: 2
+
+models:
+  - name: mart_loan_propensity
+    columns:
+      - name: account_id
+        tests: [not_null, unique]
+      - name: adopted_credit_product
+        tests: [not_null]
+
+  - name: mart_funnel
+    description: "Single-row aggregate showing funnel stage counts."

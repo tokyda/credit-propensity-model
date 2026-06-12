@@ -1,0 +1,60 @@
+version: 2
+
+models:
+  - name: stg_accounts
+    columns:
+      - name: account_id
+        tests: [not_null, unique]
+      - name: district_id
+        tests: [not_null]
+      - name: opened_date
+        tests: [not_null]
+
+  - name: stg_clients
+    columns:
+      - name: client_id
+        tests: [not_null, unique]
+
+  - name: stg_transactions
+    columns:
+      - name: trans_id
+        tests: [not_null, unique]
+      - name: account_id
+        tests: [not_null]
+      - name: amount
+        tests: [not_null]
+
+  - name: stg_loans
+    columns:
+      - name: loan_id
+        tests: [not_null, unique]
+      - name: account_id
+        tests: [not_null]
+      - name: loan_status
+        tests:
+          - accepted_values:
+              values: ['A', 'B', 'C', 'D']
+
+  - name: stg_cards
+    columns:
+      - name: card_id
+        tests: [not_null, unique]
+
+  - name: stg_districts
+    columns:
+      - name: district_id
+        tests: [not_null, unique]
+
+  - name: stg_orders
+    columns:
+      - name: order_id
+        tests: [not_null, unique]
+
+  - name: stg_dispositions
+    columns:
+      - name: disp_id
+        tests: [not_null, unique]
+      - name: disp_type
+        tests:
+          - accepted_values:
+              values: ['OWNER', 'DISPONENT']

@@ -1,0 +1,6 @@
+{
+  "lr_auc_roc": 0.8615,
+  "lr_pr_auc": 0.4414,
+  "lgbm_auc_roc": 0.9053,
+  "lgbm_pr_auc": 0.6344
+}

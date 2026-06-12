@@ -1,0 +1,19 @@
+version: 2
+
+models:
+  - name: int_account_owner
+    columns:
+      - name: account_id
+        tests: [not_null, unique]
+
+  - name: int_account_transactions
+    columns:
+      - name: trans_id
+        tests: [not_null]
+      - name: account_id
+        tests: [not_null]
+
+  - name: int_account_cards
+    columns:
+      - name: account_id
+        tests: [not_null, unique]
